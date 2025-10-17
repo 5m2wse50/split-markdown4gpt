@@ -13,10 +13,10 @@ def test_split():
 
 def test_new_openai_models():
     """Test that new OpenAI models are recognized and their limits are set correctly."""
-    splitter_4o = MarkdownLLMSplitter(gptok_model="gpt-4o")
-    assert splitter_4o.gptok_limit == 128000
-    splitter_4_turbo = MarkdownLLMSplitter(gptok_model="gpt-4-turbo")
-    assert splitter_4_turbo.gptok_limit == 128000
+    splitter_gpt5 = MarkdownLLMSplitter(gptok_model="gpt-5")
+    assert splitter_gpt5.gptok_limit == 200000
+    splitter_4_1 = MarkdownLLMSplitter(gptok_model="gpt-4.1")
+    assert splitter_4_1.gptok_limit == 1000000
 
 def test_unknown_model_warning():
     """Test that a warning is printed for unknown models."""

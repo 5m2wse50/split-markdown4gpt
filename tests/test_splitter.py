@@ -14,7 +14,9 @@ def test_split():
 def test_new_openai_models():
     """Test that new OpenAI models are recognized and their limits are set correctly."""
     splitter_gpt5 = MarkdownLLMSplitter(gptok_model="gpt-5")
-    assert splitter_gpt5.gptok_limit == 200000
+    assert splitter_gpt5.gptok_limit == 400000
+    splitter_gpt5_mini = MarkdownLLMSplitter(gptok_model="gpt-5-mini")
+    assert splitter_gpt5_mini.gptok_limit == 400000
     splitter_4_1 = MarkdownLLMSplitter(gptok_model="gpt-4.1")
     assert splitter_4_1.gptok_limit == 1000000
 

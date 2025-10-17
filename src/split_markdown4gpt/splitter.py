@@ -36,7 +36,9 @@ def meta_data(md: str) -> tuple:
 
 
 OPENAI_MODELS = {
-    "gpt-5": 200000,
+    "gpt-5": 400000,
+    "gpt-5-mini": 400000,
+    "gpt-5-nano": 400000,
     "gpt-4.1": 1000000,
     "gpt-4o": 128000,
     "gpt-4-turbo": 128000,
